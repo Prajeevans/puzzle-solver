@@ -8,8 +8,8 @@ def number_generator():
     num_1 = random.randrange(1, 20)
     num_2 = random.randrange(num_1,20)
     return num_1, num_2
-
 num_1, num_2 = number_generator()
+
 def question_maker(num_1, num_2):
     operators = {
         '+': operator.add,
@@ -31,14 +31,18 @@ def question_maker(num_1, num_2):
 # question_maker(num_1,num_2)
 
 #Main window 
-main_window = tk.Tk()  # create the main_window window
-
-# set the window size and position
+main_window = tk.Tk() 
 main_window.geometry("800x600")
-
-# set the window title
 main_window.title("Puzzle Solver")
 main_window.resizable(False, False) #disable maximize button 
 
-# start the main event loop
+#Title 
+title_label = tk.Label(main_window, text="Puzzle Solver v0.1.0", font=("Comic Sans MS", 32))
+title_label.pack(side="top", fill="x")
+
+# Question label 
+question_label = tk.Label(main_window, text="Solve this puzzle", font=("Arial", 18))
+question_label.place(x=10, y=60)
+
+
 main_window.mainloop()
