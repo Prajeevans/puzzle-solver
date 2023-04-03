@@ -1,6 +1,6 @@
 import random
 import math
-from tkinter import *
+import tkinter as tk
 import operator
 
 # Math function
@@ -28,4 +28,17 @@ def question_maker(num_1, num_2):
         # print(div_que)
         print("Answer is " ,calculator)
 
-question_maker(num_1,num_2)
+# question_maker(num_1,num_2)
+
+#Main window 
+main_window = tk.Tk()  # create the main_window window
+
+# set the window size and position
+main_window.geometry("800x600")
+
+# set the window title
+main_window.title("Puzzle Solver")
+main_window.resizable(False, False) #disable maximize button 
+
+# start the main event loop
+main_window.mainloop()
